@@ -55,7 +55,7 @@ public class KochPanel extends JPanel
       else
       {
          angle = 30+previousAngle;
-         x3 = (int)(Math.sin(Math.toRadians(angle))*(length*scalingFactor));
+         x3 = (int)(Math.sin(Math.toRadians(angle))*(length*scalingFactor)); //delta x delta y. add to the x points
          y3 = (int)(Math.cos(Math.toRadians(angle))*(length*scalingFactor));
          page.drawLine(x1,y1,x3,y3);
          double newLength = (length*(scalingFactor));
