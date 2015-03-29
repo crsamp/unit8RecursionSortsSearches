@@ -55,20 +55,14 @@ public class FractalTreePanal extends JPanel
       else
       {
          angle = 30+previousAngle;
-         System.out.println("This is x1: "+x1);
-         System.out.println("This is y1: "+y1);
          x3 = (int)(Math.sin(Math.toRadians(angle))*(length*scalingFactor)); //delta x delta y. add to the x points
          y3 = (int)(Math.cos(Math.toRadians(angle))*(length*scalingFactor));
          x6 = (int)(Math.sin(Math.toRadians(previousAngle-30))*(length*scalingFactor));
          y6 = (int)(Math.cos(Math.toRadians(previousAngle-30))*(length*scalingFactor));
-         System.out.println("This is x3: "+x3);
-         System.out.println("This is y3: "+y3);
          x4 = x1-x3;
          y4 = y1-y3;
          x7 = x1-x6;
          y7 = y1-y6;
-         System.out.println("This is x4: "+x4);
-         System.out.println("This is y4: "+y4);
          page.drawLine(x1,y1,x4,y4);
          page.drawLine(x1,y1,x7,y7);
          double newLength = (length*(scalingFactor));
